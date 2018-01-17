@@ -9,7 +9,7 @@ end
 
 i=0
 
-topics = ["bootcamp THP bot twitter"]
+topics = ["bootcamp THP bot codingbootcamp"]
 client.filter(track: topics.join(",")) do |object|
   i+=1
   puts "#{object.user.screen_name}: #{object.text}" if object.is_a?(Twitter::Tweet)
@@ -21,6 +21,6 @@ client.filter(track: topics.join(",")) do |object|
       config.access_token_secret = ""
     end
     client.favorite(object)
-    client.update("@#{object.user.screen_name}"+" Viens chercher bonheur chez THP")
+    client.update("@#{object.user.screen_name}"+" Envie d'apprendre le code, viens chez THP!")
 end
 end
